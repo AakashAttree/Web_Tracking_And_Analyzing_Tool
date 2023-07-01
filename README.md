@@ -5,7 +5,7 @@ This web application enables users to track a website using JavaScript/jQuery an
 1. User Authentication: Users can register and log in to the application to access tracking and analysis features.
 2. Admin Panel: An admin panel is available for managing users and website tracking settings.
 3. Website Tracking: The application tracks user activities on a website by capturing information from HTTP headers and cookies present in their requests.
-4.Analysis: The captured data is then analyzed and presented using pie charts and graphs for easy understanding.
+4. Analysis: The captured data is then analyzed and presented using pie charts and graphs for easy understanding.
 
 # Tech Stack
 1. Frontend: JavaScript/jQuery
