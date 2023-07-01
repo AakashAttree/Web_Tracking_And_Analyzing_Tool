@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>web.tracking</groupId>
+	<artifactId>compile.all</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>../web.tracking.core</module>
+		<module>../web.tracking.db</module>
+		<module>../web.tracking.configuration</module>
+		<module>../web.tracking.workflow.action.ip.address.handling</module>
+		<module>../web.tracking.workflow.action.referrer.handler</module>
+		<module>../web.tracking.workflow</module>
+		<module>../web.tracking.workflow.configuration</module>
+		<module>../web.tracking</module>
+		<module>../web.tracking.kafka.consumer</module>
+		<module>../web.tracking.processes</module>
+	</modules>
+</project>

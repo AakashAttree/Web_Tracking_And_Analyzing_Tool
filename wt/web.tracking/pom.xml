@@ -1,0 +1,138 @@
+<!-- <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"> -->
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>web</groupId>
+	<artifactId>tracking</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.7</version>
+	</parent>
+	<!-- -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<jjwt.version>0.9.1</jjwt.version>
+		<jacoco.version>0.8.1</jacoco.version>
+		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+		<findbugs-maven-plugin.version>3.0.5</findbugs-maven-plugin.version>
+		<findbugs.version>3.0.1</findbugs.version>
+		<docker-maven-plugin.version>1.1.1</docker-maven-plugin.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>web.tracking</groupId>
+			<artifactId>core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>web.tracking</groupId>
+			<artifactId>db</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>web.tracking</groupId>
+			<artifactId>configuration</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>web.tracking.workflow.action</groupId>
+			<artifactId>ip.address.handling</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>web.tracking.workflow.action</groupId>
+			<artifactId>referrer.handler</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-devtools</artifactId>
+		<scope>runtime</scope>
+	</dependency>
+		<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-zookeeper-config</artifactId> 
+			</dependency> -->
+		<!-- <dependency> <groupId>de.flapdoodle.embed</groupId> <artifactId>de.flapdoodle.embed.mongo</artifactId> 
+			</dependency> -->
+		<!-- Test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.force.api/force-wsc <dependency> 
+			<groupId>com.force.api</groupId> <artifactId>force-wsc</artifactId> <version>39.0.3</version> 
+			</dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/com.force.api/force-partner-api -->
+		<dependency>
+			<groupId>com.force.api</groupId>
+			<artifactId>force-partner-api</artifactId>
+			<version>22.0.0</version>
+		</dependency>
+		<!-- JSTL for JSP -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+		<!-- Need this to compile JSP -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
+		<!-- Need this to compile JSP, tomcat-embed-jasper version is not working, 
+			no idea why -->
+		<dependency>
+			<groupId>org.eclipse.jdt.core.compiler</groupId>
+			<artifactId>ecj</artifactId>
+			<version>4.6.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Optional, test for static content, bootstrap CSS -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>${jjwt.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.findbugs</groupId>
+			<artifactId>findbugs</artifactId>
+			<version>${findbugs.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>tracking-app</finalName>
+	</build>
+</project>

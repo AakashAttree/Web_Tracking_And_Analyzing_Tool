@@ -1,0 +1,8 @@
+/.metadata/
+.settings
+*.log
+.classpath
+.project
+*/target/*
+*/log/*
+web.tracking.trackingscript/target/*.*
